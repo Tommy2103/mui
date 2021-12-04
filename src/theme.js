@@ -6,8 +6,8 @@ const theme = createTheme({
       default: "#121212",
     },
     text: {
-      primary: colors.grey[50],
-      secondary: colors.grey[200],
+      primary: colors.grey[100],
+      secondary: colors.grey[400],
     },
   },
   typography: {
