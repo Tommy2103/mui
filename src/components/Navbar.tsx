@@ -4,7 +4,7 @@ const NavItems = styled(Stack)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  gap: theme.spacing(2),
+  gap: theme.spacing(3),
 }));
 
 const Offset = styled("div")(({ theme }) => ({

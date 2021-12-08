@@ -4,7 +4,6 @@ import { Link as RouterLink } from "react-router-dom";
 import { Button, Container, styled, useTheme } from "@mui/material";
 import { FaUser } from "react-icons/fa";
 
-
 const Link = styled(RouterLink)(({ theme }) => ({
   color: theme.palette.text.primary,
   textDecoration: "none",
@@ -13,13 +12,22 @@ const Link = styled(RouterLink)(({ theme }) => ({
 function App() {
   const theme = useTheme();
 
+  const hoverEffect = {
+    borderBottom: "3px solid transparent",
+    paddingBlock: 1,
+    ":hover": {
+      borderBottom: "3px solid " + theme.palette.primary.main
+    }
+  };
+
   return (
     <>
-      
       <Navbar>
-        <Link to="/">Home</Link>
-        <Link to="/cryptos">Cryptos</Link>
-        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/" sx={hoverEffect}>
+          Home
+        </Link>
+        <Link to="/cryptos" sx={hoverEffect}>Cryptos</Link>
+        <Link to="/dashboard" sx={hoverEffect}>Dashboard</Link>
         <Button variant="contained">
           <Link to="/login">Log in</Link>
         </Button>

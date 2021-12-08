@@ -3,3 +3,17 @@
 body {
   min-height: 100vh;
 }
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: blue;
+}
