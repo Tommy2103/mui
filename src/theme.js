@@ -1,18 +1,13 @@
 import { colors, createTheme } from "@mui/material";
 
-declare module '@mui/material/styles' {
-  interface Theme {
-    borderColor: string;
-  }
-
-  interface ThemeOptions {
-    borderColor?: string;
-  }
-}
 
 const theme = createTheme({
   palette: {
     mode: 'dark',
+    background: {
+      default: "#181818",
+      "900": "#222222"
+    },
     primary: {
       main: colors.blue[400],
       contrastText: colors.grey[100]
@@ -21,6 +16,7 @@ const theme = createTheme({
       primary: colors.grey[100],
       secondary: colors.grey[500],
     },
+
   },
   borderColor: "rgba(255, 255, 255, 0.4)",
   typography: {

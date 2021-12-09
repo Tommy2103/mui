@@ -11,11 +11,8 @@ const Offset = styled("div")(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
-interface Props {
-  children: JSX.Element[] | JSX.Element;
-}
 
-const Navbar = ({ children }: Props) => {
+const Navbar = ({ children }) => {
   return (
     <>
       <AppBar position="fixed" color="transparent" elevation={0}>
